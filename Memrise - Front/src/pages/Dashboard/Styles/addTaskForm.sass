@@ -1,0 +1,154 @@
+@use '../variables' as var
+@use '../mixins' as mix
+
+.addTaskForm
+    position: absolute
+    top: 0
+    left: 0
+    display: grid
+    place-items: center
+    width: 100vw
+    height: 100vh
+    z-index: 20
+    background: rgba(0, 0, 0, 0.6)
+    backdrop-filter: blur(2px)
+
+    form
+        display: flex
+        flex-direction: column
+        align-items: center       
+        width: 45vw
+        padding: 2rem
+        border-radius: 10px
+        background-color: var.$background-1
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 1) 
+        position: relative
+
+        h2
+            text-transform: uppercase
+            font-family: var.$font-1
+            font-size: 34px
+            margin: 0.5em
+
+        div
+            display: flex
+            flex-direction: column
+            width: 100%
+            padding: 15px
+            position: relative
+
+            input
+                height: 40px
+                padding: 10px
+                margin: 5px 0
+                border: 2px solid #ccc
+                border-radius: 15px
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+                outline: none
+
+                &:focus
+                    border-color: black
+
+            textarea
+                height: 10em
+                padding: 10px
+                margin: 5px 0
+                border: 2px solid #ccc
+                border-radius: 15px
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+                outline: none
+                resize: none
+                font-family: var.$font-2
+                overflow-y: auto
+
+                &:focus
+                    border-color: black
+
+            select
+                height: 40px
+                padding: 10px
+                margin: 5px 0
+                border: 2px solid #ccc
+                border-radius: 15px
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+                outline: none
+
+                &:focus
+                    border-color: black
+
+            p
+                color: red
+                font-size: 14px
+                position: absolute
+                bottom: -7px
+                left: 50%
+                transform: translate(-50%, 0)
+                text-align: center
+                width: 100%
+
+        .checkboxContainer
+            display: flex
+            flex-direction: row
+            justify-content: center
+            gap: 10px
+
+            label
+                display: flex
+                align-items: center
+                cursor: pointer
+
+                input[type="checkbox"]
+                    display: none
+
+                .custom-checkbox
+                    width: 20px
+                    height: 20px
+                    background-color: #f0f0f0
+                    border: 2px solid #ccc
+                    border-radius: 4px
+                    position: relative
+                    margin-right: 10px
+
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        width: 12px
+                        height: 12px
+                        background-color: var.$btn-color
+                        transform: translate(-50%, -50%) scale(0)
+                        transition: transform 0.2s ease-in-out
+                        border-radius: 2px
+
+                input[type="checkbox"]:checked + .custom-checkbox::after
+                    transform: translate(-50%, -50%) scale(1)
+
+                span
+                    font-size: 14px
+                    color: #333
+
+        button
+            cursor: pointer
+            border: 2px solid
+            border-radius: 15px
+            margin: 25px
+            min-width: 100px
+            padding: 0 10px
+            height: 32px
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+            font-weight: 400
+            font-size: 16px
+            font-family: var.$font-2
+            font-weight: 700
+
+            &:hover
+                color: var.$btn-color
+                background-color: white
+
+        img
+            position: absolute
+            top: 10px
+            right: 10px
+            width: 15px
+            cursor: pointer
