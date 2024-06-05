@@ -1,0 +1,107 @@
+@use '../variables' as var
+@use '../mixins' as mix
+    
+#rightAside
+    background-color: var.$background-1
+    font-family: var.$font-2
+    font-weight: 700
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    padding-left: 7px
+    animation: rightFadeIn 1s ease-out
+
+    @keyframes rightFadeIn
+        from
+            opacity: 0
+            transform: translate(100%, 0)
+        to
+            opacity: 100%   
+            transform: translate(0, 0)
+
+    h2
+        font-size: 24px
+        margin-bottom: 10px
+        padding: 1.5em 0 0 0
+        text-align: center
+
+    .logout-btn
+        border: 2px solid var.$btn-color
+        background-color: white
+        padding: 5px 10px
+        border-radius: 10px
+        font-weight: 700
+        color: var.$btn-color
+        margin: 1.5em
+
+        &:hover
+            background-color: var.$btn-color
+            color: white
+            cursor: pointer
+
+    .progress-bar-container
+        width: 90%
+        text-align: center
+
+        label
+            font-size: 18px
+            text-align: center
+
+        .progress-bar
+            width: 100%
+            background-color: #ddd
+            border-radius: 5px
+            overflow: hidden
+            margin-top: 5px
+
+        .progress-bar-filled
+            height: 20px
+            background-color: var.$btn-color
+            transition: width 0.3s
+
+        p
+            font-size: 16px
+            margin-top: 5px
+
+    .today-tasks
+        margin-top: 2em
+        width: 100%
+        overflow-y: auto
+
+        h3
+            font-size: 20px
+            margin-bottom: 10px
+
+        ul
+            list-style-type: none
+            padding: 0
+
+        li
+            background-color: #eee
+            padding: 10px
+            border-radius: 5px
+            margin-bottom: 5px
+
+        p
+            font-size: 16px
+    
+    .delete-account-btn
+        position: absolute
+        width: 90%
+        bottom: 0
+        left: 50%
+        transform: translate(-50%, 0)
+        border: 3px dashed var.$text
+        border-radius: 5px
+        margin: 1em 0
+        padding: 1em 1em
+        font-family: var.$font-2
+        font-weight: 700
+        text-transform: uppercase
+        color: var.$text
+
+        &:hover
+            cursor: pointer
+            color: red
+            border-color: red

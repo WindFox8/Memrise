@@ -1,0 +1,52 @@
+@use '../variables' as var
+@use '../mixins' as mix
+    
+#home
+    display: flex
+    align-items: center
+    position: relative
+    width: 100vw
+    height: 100vh
+    background-color: var.$background-aside
+    font-family: var.$font-2
+
+    .backLayer
+        width: 100vw
+        height: 70vh
+        display: grid
+        grid-template-columns: 50% 50%
+        text-align: center
+        align-items: center
+        background-color: var.$btn-color
+
+        section
+            @include mix.tablet
+                display: none
+
+            h3
+                color: white
+                font-size: 32px
+
+            button
+                background-color: white
+                border-radius: 15px
+                border: none
+                font-weight: 700
+                font-size: 16px
+                cursor: pointer
+                margin: 25px
+                min-width: 100px
+                padding: 0 10px
+                height: 32px
+        
+    .right
+        left: 50vw
+        @include mix.tablet
+            left: 50
+            transform: translate(-50%, 0)
+
+    .left
+        left: 5vw
+        @include mix.tablet
+            left: 50
+            transform: translate(7%, 0)

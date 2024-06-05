@@ -1,0 +1,184 @@
+@use '../variables' as var
+@use '../mixins' as mix
+
+.form
+    position: absolute
+    top: 5
+    z-index: 10
+    width: 45vw
+    height: 90vh
+    padding: 2rem
+    border-radius: 10px
+    background-color: var.$background-1
+    transition: all 1s ease
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1)
+
+    @include mix.tablet
+        width: 80vw
+        top: 50
+
+    h1
+        font-family: var.$font-1
+        line-height: 0.8em
+        text-align: center
+        font-size: 54px
+
+        @include mix.notbook
+            font-size: 48px
+
+    h2
+         
+        font-size: 32px
+        margin: 0.5em
+        @include mix.notbook
+            display: none
+
+    form
+        display: flex
+        flex-direction: column
+        width: 70%
+        height: 100%
+        align-items: center
+        animation: FadeIn 1s ease-out
+        @include mix.notbook
+            width: 90%
+            justify-content: center
+
+        @include mix.notbook
+            width: 100%
+
+        @keyframes FadeIn
+            from
+                opacity: 0
+                transform: translate(0, 100%)
+            to
+                opacity: 100%   
+                transform: translate(0, 0)
+
+        div
+            display: flex
+            flex-direction: column
+            width: 100%
+            padding: 15px
+            position: relative
+            @include mix.tablet
+                padding: 8px
+
+            input
+                height: 40px
+                padding: 10px
+                margin: 5px 0
+                border: 2px solid #ccc
+                border-radius: 15px
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+                outline: none
+
+                &:focus
+                    border-color: black
+
+            p
+                color: red
+                font-size: 14px
+                position: absolute
+                bottom: -7px
+                left: 50%
+                transform: translate(-50%, 0)
+                text-align: center
+                width: 100%
+
+        button
+            cursor: pointer
+            border: 2px solid
+            border-radius: 15px
+            margin: 25px
+            min-width: 100px
+            padding: 0 10px
+            height: 32px
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+            font-weight: 400
+            font-size: 16px
+            font-family: var.$font-1
+
+            &:hover
+                color: var.$btn-color
+                background-color: white
+
+    section
+        display: none
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        @include mix.tablet
+            display: flex
+
+        button
+                background-color: var.$btn-color
+                color: white
+                border-radius: 15px
+                border: none
+                font-weight: 700
+                font-size: 16px
+                cursor: pointer
+                margin: 5px
+                min-width: 100px
+                padding: 0 10px
+                height: 32px
+
+.popUp
+    position: absolute
+    bottom: 10px
+    color: white
+    padding: 20px
+    width: 300px
+    text-align: center
+    border-radius: 15px
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+    font-size: 16px
+
+    img
+        position: absolute
+        top: 7px
+        right: 7px
+        width: 12px
+        cursor: pointer
+
+.success
+    background-color: green
+
+.error
+    background-color: red
+
+.rightPopUpAdjust
+    right: 35vw
+
+.leftPopUpAdjust
+    left: 35vw
+
+.loader
+    display: flex
+    justify-content: space-around
+    align-items: center
+    border: none
+    outline: none
+
+    img
+        width: 20px
+        animation: spin 1s linear infinite
+
+        @keyframes spin 
+            0%
+                transform: rotate(0deg)
+            100%
+                transform: rotate(360deg)
+        
+
+    &:hover
+        background: var.$btn-color
+
+.hidden
+    display: none
+

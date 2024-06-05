@@ -1,3 +1,8 @@
-# Memrise - IN PROGRESS
+# React + Vite
 
-Website about a task scheduler connected to a database with its own API developed in React, .Net, Entity framework and SQL Server, has a login system, task organizer by directory, CRUD system, marker of important and completed tasks as well as a task search bar
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

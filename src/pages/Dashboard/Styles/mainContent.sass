@@ -1,0 +1,145 @@
+@use '../variables' as var
+@use '../mixins' as mix
+    
+#mainContent
+    background-color: var.$background-2
+    overflow-y: auto
+
+    header
+        display: flex
+        justify-content: space-between
+        padding: 1rem
+        align-items: center
+        height: 5rem
+
+        input
+            height: 3rem
+            width: 300px
+            border-radius: 5px
+            padding: 0.5em
+            margin: 0 0 0 25px
+
+        time
+            font-family: var.$font-1
+            letter-spacing: 1px
+            font-size: 18px
+
+        button
+            cursor: pointer
+            border-radius: 7px
+            border: none
+            margin: 25px
+            padding: 0.7em 1.5em
+            font-weight: 700
+            font-size: 16px
+            font-family: var.$font-2
+            display: flex
+            align-items: center
+            color: white
+            background-color: var.$btn-color
+            transition: all 0.2s
+            outline: 2px solid var.$btn-color
+            text-transform: uppercase
+
+            &:hover
+                color: var.$btn-color
+                background-color: white
+                outline: 2px solid var.$btn-color
+                
+            
+    section
+        padding: 3em 0 0 0
+        font-family: var.$font-2
+
+        ul
+            list-style-type: none
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            padding: 1rem
+            animation: fadeIn 0.8s ease-out
+
+            @keyframes fadeIn
+                from
+                    opacity: 0
+                    transform: translate(0, 100%)
+                to
+                    opacity: 100%   
+                    transform: translate(0, 0)
+
+            li
+                border-radius: 7px
+                width: 30%
+                aspect-ratio: 1/1
+                padding: 1em 1em 0 1em
+                background: white
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                position: relative
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+                margin: 3% 1.5%
+
+                h3
+                    text-align: center
+
+                p
+                    overflow-y: auto
+
+                section
+                    p
+                        font-weight: 700
+                        margin: 0.5em
+                        img
+                            width: 17px
+
+                div
+                    display: flex
+                    justify-content: space-between
+                    border-top: 2px dashed black
+                    padding: 0 0.5em 0.1em 0em
+
+                    p
+                        cursor: pointer
+                        text-align: center
+                        color: white
+                        border-radius: 20px
+                        padding: 0.5em
+                        width: 100px
+
+                    .finalizado
+                        background-color: green
+                        
+                    .pendente
+                        background-color: red
+
+                    section
+                        position: relative
+                        
+                        img
+                            width: 23px
+                            aspect-ratio: 1/1
+                            cursor: pointer
+                            position: absolute
+                            top: 1em
+
+                        .img-1
+                            right: 3.3em
+
+                        .img-2
+                            right: 1.6em
+
+                        .img-3
+                            right: 0
+
+
+
+                .directorieName
+                    position: absolute
+                    top: 0
+                    right: 15px
+                    transform: translate(0, -100%)
+                    padding: 7px 15px
+                    background: var.$btn-color
+                    color: white
+                    border-radius: 7px 7px 0 0 
