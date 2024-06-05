@@ -4,7 +4,7 @@ import DirForm from './dirForm';
 import EditDirForm from './EditDirForm';
 import '../Styles/leftAside.sass';
 
-function LeftAside({ taskChange, filter,setFilter }) {
+function LeftAside({ taskChange, filter, setFilter }) {
   const [directories, setDirectories] = useState([]);
   const [error, setError] = useState(null);
   const { user } = useContext(AuthContext);
@@ -89,6 +89,7 @@ function LeftAside({ taskChange, filter,setFilter }) {
                           dirNome={dir.nome}
                           toggleEditForm={() => setEditDirId(null)}
                           dirListChange={dirListChange}
+                          taskChange={taskChange}
                         />
                       )}
                       <img

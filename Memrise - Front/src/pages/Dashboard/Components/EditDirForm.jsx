@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../../Contexts/AuthContext';
 import '../Styles/editDirForm.sass';
 
-const EditDirForm = ({ dirId, dirNome, toggleEditForm, dirListChange }) => {
+const EditDirForm = ({ dirId, dirNome, toggleEditForm, dirListChange, taskChange }) => {
   const { register, handleSubmit, formState: { errors } } = useForm({
     defaultValues: { nome: dirNome }
   });
@@ -36,6 +36,7 @@ const EditDirForm = ({ dirId, dirNome, toggleEditForm, dirListChange }) => {
       setEditFailed(true);
     } finally {
       setLoading(false);
+      taskChange();
     }
   };
 
