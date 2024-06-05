@@ -17,16 +17,25 @@
     align-items: center
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 1)
 
+    @include mix.tablet
+        width: 80vw
+        top: 50
+
     h1
         font-family: var.$font-1
         line-height: 0.8em
         text-align: center
         font-size: 54px
 
+        @include mix.notbook
+            font-size: 48px
+
     h2
          
         font-size: 32px
         margin: 0.5em
+        @include mix.notbook
+            display: none
 
     form
         display: flex
@@ -35,6 +44,12 @@
         height: 100%
         align-items: center
         animation: FadeIn 1s ease-out
+        @include mix.notbook
+            width: 90%
+            justify-content: center
+
+        @include mix.notbook
+            width: 100%
 
         @keyframes FadeIn
             from
@@ -50,6 +65,8 @@
             width: 100%
             padding: 15px
             position: relative
+            @include mix.tablet
+                padding: 8px
 
             input
                 height: 40px
@@ -89,6 +106,27 @@
             &:hover
                 color: var.$btn-color
                 background-color: white
+
+    section
+        display: none
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        @include mix.tablet
+            display: flex
+
+        button
+                background-color: var.$btn-color
+                color: white
+                border-radius: 15px
+                border: none
+                font-weight: 700
+                font-size: 16px
+                cursor: pointer
+                margin: 5px
+                min-width: 100px
+                padding: 0 10px
+                height: 32px
 
 .popUp
     position: absolute

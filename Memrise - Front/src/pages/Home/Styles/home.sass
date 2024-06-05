@@ -20,6 +20,8 @@
         background-color: var.$btn-color
 
         section
+            @include mix.tablet
+                display: none
 
             h3
                 color: white
@@ -39,6 +41,12 @@
         
     .right
         left: 50vw
+        @include mix.tablet
+            left: 50
+            transform: translate(-50%, 0)
 
     .left
         left: 5vw
+        @include mix.tablet
+            left: 50
+            transform: translate(7%, 0)

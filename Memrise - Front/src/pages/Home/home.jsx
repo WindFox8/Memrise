@@ -24,7 +24,7 @@ function Home() {
         </section>
       </div>
       <div className={`form ${position ? 'left' : 'right'}`}>
-        {position ? <CadastroForm /> : <LoginForm />}
+        {position ? <CadastroForm toggleForm={toggleForm}/> : <LoginForm toggleForm={toggleForm}/>}
       </div>
     </div>
   );

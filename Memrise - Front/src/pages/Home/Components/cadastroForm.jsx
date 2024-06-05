@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import '../Styles/forms.sass';
 
-const CadastroForm = () => {
+const CadastroForm = ({ toggleForm }) => {
   const { register, handleSubmit, watch, formState: { errors }, setError } = useForm();
   const [registerSuccess, setRegisterSuccess] = useState(null);
   const [isLoading, setLoading] = useState(false);
@@ -110,6 +110,11 @@ const CadastroForm = () => {
           )}
         </button>
       </form>
+      <section>
+          <h3>Já possui uma conta?</h3>
+          <button onClick={toggleForm}>LOGAR</button>
+      </section>
+      
       {registerSuccess === true &&  <p className='popUp success leftPopUpAdjust'>
                                       Cadastro efetuado com sucesso.
                                       <img

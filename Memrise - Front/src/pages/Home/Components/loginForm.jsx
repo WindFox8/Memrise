@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../../Contexts/AuthContext';
 import '../Styles/forms.sass';
 
-const LoginForm = () => {
+const LoginForm = ({ toggleForm }) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { login } = useContext(AuthContext);
   const [isLoading, setLoading] = useState(false);
@@ -76,6 +76,10 @@ const LoginForm = () => {
           )}
         </button>
       </form>
+      <section>
+          <h3>Não possui uma conta?</h3>
+          <button onClick={toggleForm}>CADASTRAR</button>
+      </section>
       {loginFailed && <p className="popUp error rightPopUpAdjust">
                         Email e/ou senha incorretos.
                         <img
