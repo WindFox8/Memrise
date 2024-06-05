@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qUVjE+1talacTjhzvoUJBX//5r9JFwqtFgaXq+bFI1DUM3kE/kH9aLKuuIadkW88yAo70f4tCzmfSCz+w/n09A==",
+  "dgSpecHash": "t1rpUeKdIlW0R1PoAPoTBBnTuRgq3OF1qL8hc8ysW3Db6j+V/gYyTVaNuoLjgSfjptc0Ce9iIBAkZVEDbVC7PQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise\\Memrise.csproj",
+  "projectFilePath": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise-1\\Memrise - Back\\Memrise.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise\\Memrise.csproj": {}
+    "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise-1\\Memrise - Back\\Memrise.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise\\Memrise.csproj": {
+    "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise-1\\Memrise - Back\\Memrise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise\\Memrise.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise-1\\Memrise - Back\\Memrise.csproj",
         "projectName": "Memrise",
-        "projectPath": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise\\Memrise.csproj",
+        "projectPath": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise-1\\Memrise - Back\\Memrise.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise\\obj\\",
+        "outputPath": "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Memrise-1\\Memrise - Back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config"
