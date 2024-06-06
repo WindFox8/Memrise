@@ -114,7 +114,7 @@ const TaskForm = ({ toggleTaskForm, taskListChange }) => {
               {...register('prioridade')}
             />
             <div className="custom-checkbox" />
-            <span>Prioridade</span>
+            <span>Importante</span>
           </label>
         </div>
         {user && (

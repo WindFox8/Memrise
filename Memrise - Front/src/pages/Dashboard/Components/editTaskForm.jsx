@@ -92,7 +92,7 @@ const EditTaskForm = ({ task, closeForm, taskListChange }) => {
               {...register('prioridade')}
             />
             <div className="custom-checkbox" />
-            <span>Prioridade</span>
+            <span>Importante</span>
           </label>
           <label>
             <input
