@@ -43,7 +43,6 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
         const data = await response.json();
         setTarefas(data);
 
-        // Calculate today's tasks, total tasks, and finished tasks
         const today = new Date().toLocaleDateString();
         const todayTasks = data.filter(tarefa => new Date(tarefa.prazo).toLocaleDateString() === today).map(tarefa => tarefa.titulo);
         const totalTasks = data.length;
@@ -56,6 +55,7 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
         console.error('Erro ao buscar tarefas:', error);
         setError('Você não possui tarefas no momento');
         setTarefas([]);
+        setTodayTasks([]);
       }
     }
   };
