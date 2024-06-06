@@ -114,7 +114,7 @@ const EditTaskForm = ({ task, closeForm, taskListChange }) => {
             )}
           </button>
         )}
-        <img src="../../../src/img/xmark-solid.svg" onClick={closeForm} alt="Close" />
+        <img src="../../../src/img/xmark-solid-black.svg" onClick={closeForm} alt="Close" />
       </form>
 
       {updateFailed === true && <p className='popUp error'>

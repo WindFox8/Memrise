@@ -66,7 +66,7 @@ const DirForm = ({ toggleDirForm, dirListChange }) => {
             )}
           </button>
         )}
-        <img src="../../../src/img/xmark-solid.svg" onClick={toggleDirForm} alt="Close" />
+        <img src="../../../src/img/xmark-solid-black.svg" onClick={toggleDirForm} alt="Close" />
       </form>
       
       {creationFailed === true && <p className='popUp error'>

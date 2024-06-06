@@ -128,7 +128,7 @@ const TaskForm = ({ toggleTaskForm, taskListChange }) => {
             )}
           </button>
         )}
-        <img src="../../../src/img/xmark-solid.svg" onClick={toggleTaskForm} alt="Close" />
+        <img src="../../../src/img/xmark-solid-black.svg" onClick={toggleTaskForm} alt="Close" />
       </form>
 
       {creationFailed === true && <p className='popUp error'>

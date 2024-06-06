@@ -68,7 +68,7 @@ const EditDirForm = ({ dirId, dirNome, toggleEditForm, dirListChange, taskChange
             "EDITAR"
           )}
         </button>
-        <img src="../../../src/img/xmark-solid.svg" onClick={toggleEditForm} alt="Close"/>
+        <img src="../../../src/img/xmark-solid-black.svg" onClick={toggleEditForm} alt="Close"/>
       </form>
       
       {editFailed === true && <p className='popUp error'>

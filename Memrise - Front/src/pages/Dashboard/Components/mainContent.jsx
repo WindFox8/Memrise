@@ -162,15 +162,15 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
         <time dateTime={date}>{date}</time>
         <button className="addTaskBtn" onClick={toggleTaskForm}>Adicionar Tarefa</button>
       </header>
-      <section>
-        {error && <p>{error}</p>}
+      <div className='tasksModule'>
+        {error && <p className='error'>{error}</p>}
         {filteredTasks.length > 0 ? (
           <ul>
             {filteredTasks.slice().reverse().map(tarefa => (
               <li key={tarefa.id}>
                 <h3>{tarefa.titulo}</h3>
-                <p>{tarefa.descricao}</p>
-                <section>
+                <p className='descricao'>{tarefa.descricao}</p>
+                <div className='container'>
                   <p><img className='icon' src="../../../src/img/calendar-days-solid.svg" alt="Calendar" /> {new Date(tarefa.prazo).toLocaleDateString()}</p>
                   <div>
                     <p 
@@ -200,7 +200,7 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
                       />
                     </section>
                   </div>
-                </section>
+                </div>
                 <p className='directorieName'>{directories[tarefa.idDiretorio] || 'N/A'}</p>
               </li>
             ))}
@@ -208,7 +208,7 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
         ) : (
           !error && <p>Nenhuma tarefa encontrada.</p>
         )}
-      </section>
+      </div>
       {showTaskForm && <TaskForm toggleTaskForm={toggleTaskForm} taskListChange={fetchTarefas} />}
       {editingTask && (
         <EditTaskForm
