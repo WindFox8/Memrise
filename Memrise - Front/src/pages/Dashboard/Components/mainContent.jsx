@@ -36,6 +36,7 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
   };
 
   const fetchTarefas = async () => {
+    setError(null);
     if (user && user.id) {
       try {
         const response = await fetch(`https://localhost:7226/api/Tarefas/Usuario/${user.id}`);
@@ -53,7 +54,8 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
         setTasksFinished(tasksFinished);
       } catch (error) {
         console.error('Erro ao buscar tarefas:', error);
-        setError('Erro ao carregar tarefas');
+        setError('Você não possui tarefas no momento');
+        setTarefas([]);
       }
     }
   };

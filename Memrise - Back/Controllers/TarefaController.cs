@@ -105,7 +105,7 @@ namespace Memrise.Controllers
 
             if (tarefas == null || !tarefas.Any())
             {
-                return NotFound();
+                return Ok();
             }
 
             return Ok(tarefas);
