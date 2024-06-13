@@ -206,7 +206,7 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
             ))}
           </ul>
         ) : (
-          !error && <p>Nenhuma tarefa encontrada.</p>
+          !error && <p className='noTask'>Nenhuma tarefa encontrada.</p>
         )}
       </div>
       {showTaskForm && <TaskForm toggleTaskForm={toggleTaskForm} taskListChange={fetchTarefas} />}

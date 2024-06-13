@@ -72,16 +72,23 @@
         h3
             font-size: 20px
             margin-bottom: 10px
+            @include mix.notbook
+                font-size: 16px
 
         ul
             list-style-type: none
+            height: 18em
             padding: 0
+            @include mix.notbook
+                height: 9em
 
         li
             background-color: #eee
             padding: 10px
             border-radius: 5px
             margin-bottom: 5px
+            @include mix.notbook
+                font-size: 14px
 
         p
             font-size: 16px

@@ -57,8 +57,8 @@ const EditTaskForm = ({ task, closeForm, taskListChange }) => {
             {...register('titulo', {
               required: 'Este campo é obrigatório',
               maxLength: {
-                value: 12,
-                message: 'O nome não pode ter mais que 12 caracteres'
+                value: 24,
+                message: 'O nome não pode ter mais que 24 caracteres'
               }
             })}
             required

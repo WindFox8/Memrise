@@ -25,10 +25,17 @@
         font-size: 54px
         padding: 2rem
 
+        @include mix.notbook
+            padding: 1rem
+
+
     nav
         display: flex
         flex-direction: column
         margin: 1em 0
+
+        @include mix.notbook
+            margin: 0 0
 
         button
             padding: 1em
@@ -38,6 +45,8 @@
             font-family: var.$font-2
             font-weight: 700
             text-transform: uppercase
+            @include mix.notbook
+                padding: 0.8em
 
             &:hover
                 color: var.$btn-color
