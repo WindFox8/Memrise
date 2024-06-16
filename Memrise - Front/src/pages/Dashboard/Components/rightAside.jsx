@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../Contexts/AuthContext';
 import '../Styles/rightAside.sass';
 
-function RightAside({ todayTasks, totalTasks, tasksFinished }) {
+function RightAside({ todayTasks, totalTasks, tasksFinished, toggleRightAside, showRightAside }) {
   const { user, setIsAuthenticated, setUser } = useContext(AuthContext);
 
   const completionRate = totalTasks > 0 ? (tasksFinished / totalTasks) * 100 : 0;
@@ -32,7 +32,7 @@ function RightAside({ todayTasks, totalTasks, tasksFinished }) {
   };
 
   return (
-    <aside id="rightAside">
+    <aside id="rightAside" className={showRightAside && 'visible'}>
       <h2>Olá,<br />{user.nome}</h2>
       <button className="logout-btn" onClick={logout}>
         Deslogar
@@ -62,6 +62,7 @@ function RightAside({ todayTasks, totalTasks, tasksFinished }) {
       <button className="delete-account-btn" onClick={deleteAccount}>
         Deletar Conta
       </button>
+      <img className='close' src="../../../src/img/xmark-solid-black.svg" onClick={toggleRightAside} alt="Close"/>
     </aside>
   );
 }

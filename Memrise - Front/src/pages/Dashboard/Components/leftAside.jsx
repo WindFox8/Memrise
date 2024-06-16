@@ -4,7 +4,7 @@ import DirForm from './dirForm';
 import EditDirForm from './EditDirForm';
 import '../Styles/leftAside.sass';
 
-function LeftAside({ taskChange, filter, setFilter }) {
+function LeftAside({ taskChange, filter, setFilter, toggleLeftAside, showLeftAside }) {
   const [directories, setDirectories] = useState([]);
   const [error, setError] = useState(null);
   const { user } = useContext(AuthContext);
@@ -56,7 +56,7 @@ function LeftAside({ taskChange, filter, setFilter }) {
   };
 
   return (
-    <aside id='leftAside'>
+    <aside id='leftAside' className={showLeftAside && 'visible'}>
       <h2>MEM<br/>RISER</h2>
       <nav>
         <button key={1} className={filter === 1 ? 'active' : ''} onClick={() => handleButtonClick(1)}>Tarefas do Dia</button>
@@ -111,6 +111,7 @@ function LeftAside({ taskChange, filter, setFilter }) {
       </details>
       <button className='addDirBtn' onClick={toggleDirForm}>Novo Diretório</button>
       {showDirForm && <DirForm toggleDirForm={toggleDirForm} dirListChange={dirListChange} />}
+      <img className='close' src="../../../src/img/xmark-solid-black.svg" onClick={toggleLeftAside} alt="Close"/>
     </aside>
   );
 }

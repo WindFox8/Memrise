@@ -1,4 +1,9 @@
+@use '../variables' as var
+@use '../mixins' as mix
+
 #dashboard
     display: grid
     grid-template-columns: 17% auto 17%
     height: 100vh
+    @include mix.tablet
+        grid-template-columns: auto

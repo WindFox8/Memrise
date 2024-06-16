@@ -1,5 +1,9 @@
 @use '../variables' as var
 @use '../mixins' as mix
+
+.visible
+    @include mix.tablet
+        display: flex !important
     
 #rightAside
     background-color: var.$background-1
@@ -11,6 +15,14 @@
     position: relative
     padding-left: 7px
     animation: rightFadeIn 1s ease-out
+    @include mix.tablet
+        display: none
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 5
+        width: 50vw
+        height: 100%
 
     @keyframes rightFadeIn
         from
@@ -115,3 +127,13 @@
             color: white
             background: red
             border-color: white
+
+    .close
+        display: none
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 15px
+        cursor: pointer
+        @include mix.tablet
+            display: inline

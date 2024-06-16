@@ -4,7 +4,10 @@ import TaskForm from './taskForm';
 import EditTaskForm from './editTaskForm';
 import '../Styles/mainContent.sass';
 
-function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTasksFinished }) {
+function MainContent({ taskChanged, filter, setTodayTasks, 
+                      setTotalTasks, setTasksFinished, toggleLeftAside,
+                      toggleRightAside
+                    }) {
   const { user } = useContext(AuthContext);
   const [tarefas, setTarefas] = useState([]);
   const [directories, setDirectories] = useState({});
@@ -148,6 +151,7 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
   return (
     <main id="mainContent">
       <header>
+        <img className='asideButton' onClick={toggleLeftAside} src="../../../src/img/bars-solid.svg" alt="Bars" />
         <input 
           type="text" 
           list="searchTarefas" 
@@ -161,6 +165,7 @@ function MainContent({ taskChanged, filter, setTodayTasks, setTotalTasks, setTas
         </datalist>
         <time dateTime={date}>{date}</time>
         <button className="addTaskBtn" onClick={toggleTaskForm}>Adicionar Tarefa</button>
+        <img className='asideButton' onClick={toggleRightAside} src="../../../src/img/user-regular.svg" alt="User" />
       </header>
       <div className='tasksModule'>
         {error && <p className='error'>{error}</p>}
