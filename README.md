@@ -4,9 +4,9 @@ Website about task scheduler using React, C#, .Net, Entity framework and SQL Ser
 
 # Requisitos
 
-  Node.js
-  .NET 6 SDK
-  SQL Server 22
+  - Node.js
+  - .NET 6 SDK
+  - SQL Server 22
 
 # Instalação
 
